@@ -28,9 +28,25 @@ A reusable Node.js + Express middleware package for rendering interactive sales 
 
     
 ## Quick Start
-    **Install the package in your Express application:
+>>**Install the package in your Express application:
 
      npm install sales-dashboard-charts chart.js
+
+
+>>**Add the middleware to your Express app::
+
+      const express = require('express');
+      const { salesDashboardMiddleware } = require('sales-dashboard-charts');
+      
+      const app = express();
+      
+      // Use the dashboard middleware
+      app.use(salesDashboardMiddleware());
+      
+      app.listen(3000, () => {
+        console.log('Dashboard available at http://localhost:3000/dashboard');
+      });
+
 
 
 
