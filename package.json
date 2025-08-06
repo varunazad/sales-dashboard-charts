@@ -1,0 +1,20 @@
+{
+  "name": "sales-dashboard-charts",
+  "version": "1.0.0",
+  "description": "An Express-compatible package to render sales dashboard charts",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "nodemon test_app/server.js",
+    "test:app": "nodemon test_app/server.js"
+  },
+  "author": "Varun Chaturvedi",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.10"
+  }
+}

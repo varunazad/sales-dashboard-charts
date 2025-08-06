@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sales Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/dashboard/assets/charts.js"></script>
+  <style>
+    :root {
+      --bg-color: #f5f7fb;
+      --card-bg: #fff;
+      --primary: #3f51b5;
+      --text-color: #333;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    .header {
+      background-color: var(--primary);
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .chart-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      color: var(--primary);
+    }
+
+    canvas {
+      width: 100% !important;
+      height: auto !important;
+    }
+
+    @media (max-width: 500px) {
+      .header {
+        font-size: 1.4rem;
+      }
+
+      .dashboard {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">📊 Sales Dashboard</div>
+
+  <div class="dashboard">
+    <div class="card">
+      <div class="chart-title">Top Selling Products</div>
+      <canvas id="topProducts"></canvas>
+    </div>
+    <div class="card">
+      <div class="chart-title">Top Selling Categories</div>
+      <canvas id="topCategories"></canvas>
+    </div>
+    <div class="card">
+      <div class="chart-title">Monthly Revenue</div>
+      <canvas id="monthlyRevenue"></canvas>
+    </div>
+    <div class="card">
+      <div class="chart-title">Weekly Revenue</div>
+      <canvas id="weeklyRevenue"></canvas>
+    </div>
+  </div>
+</body>
+</html>
